@@ -2,6 +2,21 @@ h1 {
     color: #27aedb;
     text-align: center;
     }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #27aedb;
+}
+#main{
+    width: 360px;
+    border-radius: 5px;
+    background-color: white;
+    margin: auto;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 10px;
+  }
     
 
 button{
@@ -9,4 +24,44 @@ button{
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+#register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.form-field{
+    margin: 10px 0 10px 0;
+    padding: 15px;
+    font-size: 16px;
+    border: 0;
+    font-family: "Roboto", sans-serif;
+}
+input{
+    background: #f2f2f2;
+}
+select{
+    background: #f2f2f2;
+}
+#submit{
+    margin: 10px 0 10px 0;
+    padding: 15px;
+    font-size: 16px;
+    background: #3f89f8;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+span {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: red;
+    margin-bottom: 15px;
+}
+.success-message{
+    font-family: "Roboto", sans-serif;
+    background-color: #27db90;
+    padding: 15px;
+    color: white;
 }
