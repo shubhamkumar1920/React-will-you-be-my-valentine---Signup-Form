@@ -50,26 +50,16 @@ const App = () => {
         name="Name"
         required>
         </input>
-        {submitted && !values.name ? <span>Name Error</span> : null}
-        {submitted && values.name && !isNaN(values.name) ? <span>Name is not alphanumeric</span> : null}
+      
         <input data-testid='email' className="form-field" value={values.email} onChange={handleEmailInputChange}
-        type="email"
-        placeholder="Email"
-        name="email"
-        required>
-        </input>
-        {submitted && !values.email ? <span>Email Error</span> : null}
-        {submitted && values.email && !values.email.includes("@") ? <span>Email must contain @</span> : null}
+        type="email" placeholder="Email" name="email" required></input>
         <select data-testid='gender' className="form-field" value={values.gender} onChange={handleGenderInputChange}>
             <option defaultValue="male">male</option>
             <option value="female">female</option>
             <option value="others">others</option>
         </select>
         <input data-testid='phoneNumber' required className="form-field" value={values.phonenumber} onChange={handlePhoneNumberInputChange} type="number" placeholder="phone" ></input>
-        {submitted && !values.phonenumber ? <span>Phone Number Error</span> : null}
         <input data-testid='password' required id="password" type='password' className="form-field" value={values.password} onChange={handlePasswordInputChange} placeholder="password"></input>
-        {submitted && !values.password ? <span>Password Error</span> : null}
-        {submitted && values.password && document.getElementById('password').value.length < 6 ? <span>Password must contain atleast 6 letters</span> : null}
         <button data-testid='submit' className="form-field" id="submit" placeholder="Submit">Submit</button>
       </form>
     </div>
