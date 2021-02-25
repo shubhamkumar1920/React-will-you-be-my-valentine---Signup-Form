@@ -14,22 +14,27 @@ const App = () => {
 
   const handleNameInputChange = (event) => {
     setValues({...values,name: event.target.value});
+    setValid(false);
   };
 
   const handleEmailInputChange = (event) => {
     setValues({...values,email: event.target.value});
+    setValid(false);
   };
 
   const handleGenderInputChange = (event) => {
     setValues({...values,gender: event.target.value});
+    setValid(false);
   };
 
   const handlePhoneNumberInputChange = (event) => {
     setValues({...values,phonenumber: event.target.value});
+    setValid(false);
   };
 
   const handlePasswordInputChange = (event) => {
     setValues({...values,password: event.target.value});
+    setValid(false);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -50,9 +55,9 @@ const App = () => {
         name="Name"
         required>
         </input>
-      
         <input data-testid='email' className="form-field" value={values.email} onChange={handleEmailInputChange}
-        type="email" placeholder="Email" name="email" required></input>
+        type="email" placeholder="Email" name="email" required>
+        </input>
         <select data-testid='gender' className="form-field" value={values.gender} onChange={handleGenderInputChange}>
             <option defaultValue="male">male</option>
             <option value="female">female</option>
