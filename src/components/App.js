@@ -51,7 +51,7 @@ const App = () => {
         required>
         </input>
         {submitted && !values.name ? <span>Name Error</span> : null}
-        {/* {submitted && values.name && !isNaN(values.name) ? <span>Name is not alphanumeric</span> : null} */}
+        {submitted && values.name && !isNaN(values.name) ? <span>Name is not alphanumeric</span> : null}
         <input data-testid='email' className="form-field" value={values.email} onChange={handleEmailInputChange}
         type="email"
         placeholder="Email"
