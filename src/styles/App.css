@@ -53,11 +53,13 @@ select{
     cursor: pointer;
     border-radius: 10px;
 }
-span {
+.error {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
-    color: red;
+    background-color: red;
     margin-bottom: 15px;
+    color: white;
+    text-align: center;
 }
 .success-message{
     font-family: "Roboto", sans-serif;
